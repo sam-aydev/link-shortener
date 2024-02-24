@@ -89,7 +89,7 @@ export default function ThirdSection() {
 
             <button
               disabled={isLoading}
-              className="text-center md:w-[18%] w-full  text-white bg-sky-500 h-8 md:h-10 xl:h-16 md:px-0 rounded-md xl:py-4 xl:text-xl"
+              className="text-center md:w-[18%] w-full  text-white bg-sky-500 h-8 md:h-10 xl:h-20 md:px-0 rounded-md xl:py-4 xl:text-xl"
             >
               Shorten It!
             </button>
