@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Shorten } from "@/components/ShortenComp";
 
 import Image from "next/image";
@@ -16,11 +16,11 @@ export default function ThirdSection() {
   const [isCopied, setIsCopied] = useState("");
   const [error, setIsError] = useState(false);
 
-  useEffect(() => {
-    const theUrl = JSON.parse(window.localStorage.getItem("url"));
-    console.log(theUrl);
-    setMyUrl(theUrl);
-  }, []);
+  // useEffect(() => {
+  //   const theUrl = JSON.parse(window.localStorage.getItem("url"));
+  //   console.log(theUrl);
+  //   setMyUrl(theUrl);
+  // }, []);
 
   async function handleUrl(e: any) {
     e.preventDefault();
@@ -46,7 +46,7 @@ export default function ThirdSection() {
       setIsLoading(false);
     }
   }
-  window.localStorage.setItem("url", JSON.stringify(myUrl));
+  // window.localStorage.setItem("url", JSON.stringify(myUrl));
 
   async function handleCopy(link: string) {
     try {
