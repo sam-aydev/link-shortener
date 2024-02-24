@@ -17,7 +17,7 @@ export default function ThirdSection() {
   const [error, setIsError] = useState(false);
 
   useEffect(() => {
-    const theUrl = JSON.parse(localStorage.getItem("url"));
+    const theUrl = JSON.parse(window.localStorage.getItem("url"));
     console.log(theUrl);
     setMyUrl(theUrl);
   }, []);
@@ -46,7 +46,7 @@ export default function ThirdSection() {
       setIsLoading(false);
     }
   }
-  localStorage.setItem("url", JSON.stringify(myUrl));
+  window.localStorage.setItem("url", JSON.stringify(myUrl));
 
   async function handleCopy(link: string) {
     try {
